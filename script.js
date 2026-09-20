@@ -1,17 +1,22 @@
 // ==========================================
-// 1. TAB SWITCHING (Home Page)
+// 1. TAB SWITCHING WITH SLIDE ANIMATION
 // ==========================================
 function switchTab(tabName, btnElement) {
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-    });
-    
+    // Buttons ka active color change karein
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    
-    document.getElementById('tab-' + tabName).classList.add('active');
     btnElement.classList.add('active');
+
+    // Slide karne ke liye position calculate karein
+    const tabs = ['facials', 'waxing', 'hair', 'bodyclean'];
+    const index = tabs.indexOf(tabName);
+    const wrapper = document.querySelector('.tabs-wrapper');
+    
+    // Wrapper ko shift karein (25% * index)
+    if (wrapper) {
+        wrapper.style.transform = `translateX(-${index * 25}%)`;
+    }
 }
 
 // ==========================================
@@ -56,10 +61,9 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         return;
     }
     
-    // Aapka Naya WhatsApp Number
     const yourNumber = "919896874368"; 
     
-    const message = `*New Appointment Request* %0A%0A👤 Name: ${name}%0A Mobile: ${mobile}%0A📍 Address: ${address}%0A💇♀️ Service: ${service}`;
+    const message = `*New Appointment Request* %0A%0A👤 Name: ${name}%0A Mobile: ${mobile}%0A📍 Address: ${address}%0A♀️ Service: ${service}`;
     
     window.open(`https://wa.me/${yourNumber}?text=${message}`, '_blank');
     
