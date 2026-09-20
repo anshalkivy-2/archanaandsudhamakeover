@@ -1,5 +1,5 @@
 // ==========================================
-// 1. TAB SWITCHING WITH SLIDE ANIMATION
+// 1. TAB SWITCHING WITH SLIDE ANIMATION & SCROLL
 // ==========================================
 function switchTab(tabName, btnElement) {
     // Buttons ka active color change karein
@@ -8,14 +8,31 @@ function switchTab(tabName, btnElement) {
     });
     btnElement.classList.add('active');
 
-    // Slide karne ke liye position calculate karein
+    // Content Slide Karne Ke Liye
     const tabs = ['facials', 'waxing', 'hair', 'bodyclean'];
     const index = tabs.indexOf(tabName);
     const wrapper = document.querySelector('.tabs-wrapper');
     
-    // Wrapper ko shift karein (25% * index)
     if (wrapper) {
         wrapper.style.transform = `translateX(-${index * 25}%)`;
+    }
+
+    // Tabs Bar Ko Scroll Karne Ke Liye (Center Alignment)
+    const tabsContainer = document.querySelector('.apple-glass-tabs');
+    if (tabsContainer && btnElement) {
+        // Calculate karein ki button ko center lane ke liye kitna scroll karna hai
+        const containerWidth = tabsContainer.offsetWidth;
+        const btnLeft = btnElement.offsetLeft;
+        const btnWidth = btnElement.offsetWidth;
+        
+        // Scroll position calculate karein
+        const scrollPosition = btnLeft - (containerWidth / 2) + (btnWidth / 2);
+        
+        // Smooth scroll karein
+        tabsContainer.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
     }
 }
 

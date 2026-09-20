@@ -60,7 +60,7 @@ h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* APPLE-STYLE GLASS TABS */
+/* UPDATED TABS STYLING FOR SLIDING */
 .apple-glass-tabs {
     display: flex;
     backdrop-filter: blur(30px) saturate(180%);
@@ -73,11 +73,23 @@ h1 {
     margin-bottom: 30px;
     gap: 6px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    
+    /* NEW PROPERTIES FOR SLIDING TABS */
+    overflow-x: auto;       
+    scroll-behavior: smooth; 
+    white-space: nowrap;     
+    -ms-overflow-style: none;  
+    scrollbar-width: none;   
+}
+
+/* Scrollbar hide karne ke liye */
+.apple-glass-tabs::-webkit-scrollbar {
+    display: none;
 }
 
 .tab-btn {
-    flex: 1;
-    padding: 14px 10px;
+    flex: 0 0 auto;         /* Button shrink nahi hoga */
+    padding: 14px 20px;     /* Thoda width badhai hai */
     background: transparent;
     border: none;
     border-radius: 18px;
@@ -87,7 +99,7 @@ h1 {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    white-space: nowrap; /* Text wrap hone se rokega */
+    white-space: nowrap;
 }
 
 .tab-btn.active {
@@ -105,17 +117,17 @@ h1 {
 /* SLIDING TABS CONTAINER */
 #home-page {
     position: relative;
-    overflow: hidden; /* Content bahar na dikhe */
+    overflow: hidden; 
 }
 
 .tabs-wrapper {
     display: flex;
-    width: 400%; /* 4 tabs = 400% width */
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth slide effect */
+    width: 400%; 
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 .tab-content {
-    width: 25%; /* Har tab screen ka 25% lega */
+    width: 25%; 
     flex-shrink: 0;
     padding: 0 5px;
     box-sizing: border-box;
