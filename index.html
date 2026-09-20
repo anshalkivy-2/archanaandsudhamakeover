@@ -23,11 +23,12 @@
         <!-- PAGE 1: HOME -->
         <section id="home-page" class="page active">
             
-            <!-- APPLE-STYLE GLASS TABS -->
+            <!-- APPLE-STYLE GLASS TABS (UPDATED WITH BODY CLEAN) -->
             <div class="apple-glass-tabs">
                 <button class="tab-btn active" onclick="switchTab('facials', this)">Facials</button>
                 <button class="tab-btn" onclick="switchTab('waxing', this)">Waxing</button>
                 <button class="tab-btn" onclick="switchTab('hair', this)">Hair & Threading</button>
+                <button class="tab-btn" onclick="switchTab('bodyclean', this)">Body Clean</button>
             </div>
 
             <!-- FACIALS CONTENT -->
@@ -67,10 +68,10 @@
                     <div class="sub-category">
                         <h3>Normal Wax</h3>
                         <ul class="price-list small">
-                            <li><span>Under Arms</span> <span class="price">50</span></li>
+                            <li><span>Under Arms</span> <span class="price">₹50</span></li>
                             <li><span>Full Arms</span> <span class="price">₹250</span></li>
                             <li><span>Full Legs</span> <span class="price">₹250</span></li>
-                            <li><span>Full Body</span> <span class="price">₹1500</span></li>
+                            <li><span>Full Body</span> <span class="price">1500</span></li>
                         </ul>
                     </div>
 
@@ -88,21 +89,20 @@
                         <h3>Rica Wax</h3>
                         <ul class="price-list small">
                             <li><span>Under Arms</span> <span class="price">₹100</span></li>
-                            <li><span>Full Arms</span> <span class="price">750</span></li>
+                            <li><span>Full Arms</span> <span class="price">₹750</span></li>
                             <li><span>Full Legs</span> <span class="price">₹750</span></li>
                             <li><span>Full Body</span> <span class="price">₹2299</span></li>
-                            <!-- NEW SERVICES ADDED HERE -->
-                            <li><span>Face</span> <span class="price">500</span></li>
+                            <li><span>Face</span> <span class="price">₹500</span></li>
                             <li><span>Nose</span> <span class="price">₹100</span></li>
                             <li><span>Eyebrows</span> <span class="price">₹200</span></li>
-                            <li><span>Chin</span> <span class="price">50</span></li>
-                            <li><span>Upper Lip</span> <span class="price">₹50</span></li>
+                            <li><span>Chin</span> <span class="price">₹50</span></li>
+                            <li><span>Upper Lip</span> <span class="price">₹100</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- HAIR & THREADING CONTENT -->
+            <!-- HAIR & THREADING CONTENT (UPDATED WITH MASSAGE & SPA) -->
             <div id="tab-hair" class="tab-content">
                 <div class="glass-card">
                     <div class="card-header">
@@ -126,7 +126,16 @@
                             <li><span>3 Step Cut</span> <span class="price">₹350</span></li>
                             <li><span>Layer Cut</span> <span class="price">₹400</span></li>
                             <li><span>Feather / Mix</span> <span class="price">₹500</span></li>
-                            <li><span>Baby Cut</span> <span class="price">200</span></li>
+                            <li><span>Baby Cut</span> <span class="price">₹200</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- NEW SERVICES ADDED HERE -->
+                    <div class="sub-category">
+                        <h3>Hair Care & Massage</h3>
+                        <ul class="price-list small">
+                            <li><span>Head Massage</span> <span class="price">₹200</span></li>
+                            <li><span>Hair Spa</span> <span class="price">₹500</span></li>
                         </ul>
                     </div>
 
@@ -141,12 +150,32 @@
                 </div>
             </div>
 
+            <!-- NEW BODY CLEAN SECTION -->
+            <div id="tab-bodyclean" class="tab-content">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <h2>Body Clean & Nail Care</h2>
+                    </div>
+                    
+                    <div class="sub-category">
+                        <h3>Nail Services</h3>
+                        <ul class="price-list small">
+                            <li><span>Manicure</span> <span class="price">₹300</span></li>
+                            <li><span>Pedicure</span> <span class="price">₹400</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- PAGE 2: TIMINGS -->
         <section id="time-page" class="page">
             <div class="glass-card center-content">
-                <h2> Studio Timings</h2>
+                <h2>⏰ Studio Timings</h2>
                 <div class="timing-row">
                     <span>Monday - Saturday</span>
                     <span class="highlight-time">10:00 AM - 8:00 PM</span>
@@ -159,7 +188,7 @@
             </div>
         </section>
 
-        <!-- PAGE 3: BOOKING FORM -->
+        <!-- PAGE 3: BOOKING FORM (UPDATED WITH NEW SERVICES) -->
         <section id="booking-page" class="page">
             <div class="glass-card form-card">
                 <h2>📅 Book Your Appointment</h2>
@@ -207,12 +236,11 @@
                                 <option value="Rica Wax - Full Arms">Rica Wax - Full Arms - ₹750</option>
                                 <option value="Rica Wax - Full Legs">Rica Wax - Full Legs - ₹750</option>
                                 <option value="Rica Wax - Full Body">Rica Wax - Full Body - ₹2299</option>
-                                <!-- NEW SERVICES IN DROPDOWN -->
                                 <option value="Rica Wax - Face">Rica Wax - Face - ₹500</option>
                                 <option value="Rica Wax - Nose">Rica Wax - Nose - ₹100</option>
                                 <option value="Rica Wax - Eyebrows">Rica Wax - Eyebrows - ₹200</option>
                                 <option value="Rica Wax - Chin">Rica Wax - Chin - ₹50</option>
-                                <option value="Rica Wax - Upper Lip">Rica Wax - Upper Lip - ₹50</option>
+                                <option value="Rica Wax - Upper Lip">Rica Wax - Upper Lip - ₹100</option>
                             </optgroup>
                             <optgroup label="Hair Cuts">
                                 <option value="Simple Cut">Simple Cut - ₹100</option>
@@ -224,10 +252,20 @@
                                 <option value="Feather / Mix">Feather / Mix - ₹500</option>
                                 <option value="Baby Cut">Baby Cut - ₹200</option>
                             </optgroup>
+                            <!-- NEW HAIR CARE OPTIONS IN DROPDOWN -->
+                            <optgroup label="Hair Care & Massage">
+                                <option value="Head Massage">Head Massage - ₹200</option>
+                                <option value="Hair Spa">Hair Spa - ₹500</option>
+                            </optgroup>
                             <optgroup label="Threading">
                                 <option value="Forehead / Upper Lip / Chin">Forehead / Upper Lip / Chin - ₹15</option>
                                 <option value="Eyebrows">Eyebrows - ₹30</option>
                                 <option value="Full Face">Full Face - ₹200</option>
+                            </optgroup>
+                            <!-- NEW BODY CLEAN OPTIONS IN DROPDOWN -->
+                            <optgroup label="Body Clean & Nail Care">
+                                <option value="Manicure">Manicure - ₹300</option>
+                                <option value="Pedicure">Pedicure - ₹400</option>
                             </optgroup>
                         </select>
                     </div>
@@ -253,7 +291,6 @@
                     <a href="mailto:archanamakeover123@gmail.com" class="value">archanamakeover123@gmail.com</a>
                 </div>
 
-                <!-- NEW ADDRESS ADDED HERE -->
                 <div class="contact-item">
                     <span class="label">Address</span>
                     <span class="value">Sector-122, Parthala Khanjarpur, Noida</span>
